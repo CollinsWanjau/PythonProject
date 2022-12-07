@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-num1 = 25000000
-num2 = 25_000_000
-
-print(num1)
-print(num2)
-
+x = int(input("Please enter an integer: "))
+if x < 0:
+    x = 0
+    print('Negative changed to zero')
+elif x == 0:
+    print('Zero')
+elif x == 1:
+    print('Single')
+else:
+    print('More')
