@@ -9,3 +9,6 @@ print([x*2 for x in vec])
 
 # filter the list to exclude negative numbers
 print([x for x in vec if x>=0])
+
+# apply a function to all the elements
+print([abs(x) for x in vec])
