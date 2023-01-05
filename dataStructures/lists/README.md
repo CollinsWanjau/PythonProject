@@ -163,4 +163,15 @@ singleton
 x, y, z = t
 ```
 * This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side.
-* Sequence unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the sequence. 
+* Sequence unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the sequence.
+
+# Learn to Program: Lits
+
+## Problem: CREATE A RANDOM LIST
+
+* Generate a random list of 5 values btw 1 and 9
+```
+numList = []
+for i in range(5):
+    numList.append(random.randrange(1, 9))
+``` 
