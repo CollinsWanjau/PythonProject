@@ -262,3 +262,32 @@ for i in listOfValues:
     print(i)
 print()
 ```
+
+* Creating a multiDimensional matrix
+```
+#!/usr/bin/python3
+
+multiDlist = [[0] * 10 for i in range(10)]
+
+multiDlist[0][1] = 10
+
+print(multiDlist[0][1])
+```
+
+* Shows how indexes work with multidimensional list
+```
+#!/usr/bin/python3
+
+# show how indexes work with a multiDimensional
+
+listTable = [[0] * 4 for i in range(4)]
+
+for i in range(4):
+    for j in range(4):
+        listTable[i][j] = f"{i} : {j}"
+
+for i in range(4):
+    for j in range(4):
+        print(listTable[i][j], end = " || ")
+    print()
+``` 
