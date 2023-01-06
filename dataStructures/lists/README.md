@@ -245,3 +245,20 @@ evenList = [i*2 for i in range(10)]
 for i in evenList:
     print(i)
 ```
+
+* Lists containing values to the power of 2,3,4
+```
+#!/usr/bin/python3
+
+import random
+import math
+
+numList = [1,2,3,4,5]
+
+listOfValues = [[math.pow(m, 2), math.pow(m, 3), math.pow(m, 4)]
+        for m in numList]
+
+for i in listOfValues:
+    print(i)
+print()
+```
