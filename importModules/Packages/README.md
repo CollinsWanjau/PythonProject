@@ -1,0 +1,121 @@
+# Packages
+
+* Users of the package can import individual modules from
+the package:
+`import sound.effects.echo`
+
+* An alternative way of importing the submodule is:
+`from sound.effects import echo`
+
+* Another variation is to import the desired function or variable
+directly.
+`from sound.effects.echo import echofilter`
+
+* The import statement first tests whether the item is defined in
+the package; if not, it assumes it is a module and attempts to load
+it.If it fails it finds an `Import Error Exception`.
+
+* Contrarily, when using syntax like import item.subitem.subsubitem, 
+each item except for the last must be a package; the last item can 
+be a module or a package but can’t be a class or function or 
+variable defined in the previous item.
+
+* In the syntax `import item.subitem.subsubitem`, each item except
+for the last one must be a package.The last item can be either a
+module or a package, but it cannot be a class, function, or a
+variable defined in the previous item.
+
+* This syntax allows you to import a specific module or package from
+within  a package hierachy
+
+* The `__all__` list in the `__init__.py` file of a package is used
+to define the names of modules that should be improved when the
+`from package import *` statement is encountered.
+
+* The `__all__` list should contain a list of strings, where each
+string is the name of a module within the package.
+
+* If the subpackage `effects`, and the `__init.py` file of the
+`effects` package contains the following line:
+```
+__all__ = ['echo', 'reverb']
+```
+
+## Intra-packages
+
+* You can also write relative imports, with the `from module import
+name`.This imports use leading dots to indicate the current and
+parent packages involved in the relative import.
+
+```
+from . import echo
+from .. import formats
+from ..filters import equalizer
+```
+
+* Since the name of the main module is always `"__main__"`,modules
+intended for use as the main module of a Python application must
+always use absolute imports.
+
+# Compare with C
+
+(file organization, not prototype vs code etc.)
+
+In python:
+```
+import abs
+abs.my_abs(89)
+```
+
+or
+
+```
+from abs import my_abs
+my_abs(89)
+```
+
+In C: `#include "my_math/abs.h"`
+
+In Python:
+```
+from my_math.abs import abs
+my_abs(89)
+```
+
+or
+
+```
+import my_math.abs
+my_math.abs.my_abs(89)
+
+`import my_math.abs` => YES but you will use your function like
+that:`my_math.abs.my_abs(89)`. => not friendly.
+
+`from my_math.abs import my_abs` => now you can use your function
+like that:
+`my_abs(89)`
+
+## `import *` is dangerous
+
+* What the difference?
+
+* `from abs import my_abs` is using a relative path between your file who imports
+and the module to import.
+
+* `from my_math.abs import my_abs` is using an absolute path between the file
+you executed and the module to import
+
+## File storage == JSON serialization
+
+* You can't store and restore a python instance of a class as "Bytes", the
+only way is to convert it to a serializable data structure.
+
+* Convert an instance to python built in serializable data structure(list, 
+dict, number and string) - for us it will be the method `my_instance.to_json`
+to retrieve a dictionary.
+
+* Convert this data structure to a string(JSON format, but it can be YAML, XML
+CSV) - for us it will be a `my_string = JSON.dumps(my_dict)`.
+
+
+
