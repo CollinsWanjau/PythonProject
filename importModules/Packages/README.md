@@ -87,6 +87,9 @@ or
 ```
 import my_math.abs
 my_math.abs.my_abs(89)
+```
+
+# Dotted module names == Path
 
 `import my_math.abs` => YES but you will use your function like
 that:`my_math.abs.my_abs(89)`. => not friendly.
@@ -118,4 +121,10 @@ to retrieve a dictionary.
 CSV) - for us it will be a `my_string = JSON.dumps(my_dict)`.
 
 
+# cmd -- Support for line-oriented command interpreters
 
+* The `cmd` class provides a simple framework for writing line-oriented
+command interpreters.
+
+* These are often useful for test harness, administrative tools, and
+prototypes.
