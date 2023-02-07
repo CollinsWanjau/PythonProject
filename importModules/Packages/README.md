@@ -128,3 +128,34 @@ command interpreters.
 
 * These are often useful for test harness, administrative tools, and
 prototypes.
+
+* `class cmd.Cmd(completekey='tab', stdin=None, stdout=None)`
+-> A cmd instance or subclass instance is a line-oriented interpreter
+framework.There is no good reason to instantiate cmd itself;rather, it's
+useful as a superclass of an interpreter class you define yourself in order
+to inherit `cmd` methods and encapsulate action methods.
+
+# cmd -- Create line-oriented command processors
+
+* The cmd module contains one public class, `cmd`, designed to be used as a
+base class for command processors such as interactive shells and other
+command interpreters.
+
+* By default it uses `readline` for interactive prompt handling, command line
+editing, and command completion
+
+# Cmd Objects
+
+* A cmd instance has the following methods:
+
+1. `Cmd.cmdloop(intro=None)` - Repeatedly issue a prompt, access input, parse
+an initial preifx off the received input, and dispatch to action methods
+passing them the remainder of the line as arg.
+
+* If the `readline` module is loaded, input will automatically inherit
+bash-like history-list editing
+
+* The end-of-file marker is dispacthed to `do_EOF`.If a command handler
+returns a true value, the program will exit cleanly.So to give a clean way to
+exit your interpreter, make sure to implement `do_EOF` and have it return
+true.
