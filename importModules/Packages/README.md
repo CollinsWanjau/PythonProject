@@ -159,3 +159,16 @@ bash-like history-list editing
 returns a true value, the program will exit cleanly.So to give a clean way to
 exit your interpreter, make sure to implement `do_EOF` and have it return
 true.
+
+2. `onecmd` - used to execute a single command passed as a string argument.
+The `onecmd` is part of the `cmd.Cmd` class, which provides a basic framework
+for creating line-oriented command interpreters.
+
+* It takes a single string arg representing a command, parses it, and executes
+the corresponding method that implements the command.
+
+## Overiding Base Class Methods
+
+* Cmd includes several methods that can be overridden as hooks for taking
+or altering the base class behaviour e.g the `cmdloop` method can be overriden
+to provide a custom main loop for the CLI.
