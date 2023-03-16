@@ -71,3 +71,43 @@ created by the class definition.
 
 * We can dynamically create arbitrary new attributes for existing instnaces
 of a class
+
+## Data Abastraction, Data Encapsualtion, and Information Hiding
+
+### Definition of Terms
+
+* `Encapsulation is seen as bundling of data with the methods that operate on data
+that data.Information is wher some internal informartion is hidden`, so that
+it can't be accidentally changed.
+
+* `Data Abstraction` is present if both data hiding and data encapsulation
+is present
+
+* `Encapsulation`  is often accomplished by providing two kinds of methods
+for attributes:
+    1. The methods for retrieving or accessing the values of attributes are
+        called `getter methods`.
+    * `Getter methods` do not change values of attributes, they just return
+        the values.
+    2. The methods used for changing the values of attributes are called
+        `setter` methods.
+
+## Public, -Protected-, and Private Attributes
+
+* `Public (name)` - these attributes can be freely used inside or outside a class
+definition.
+
+* `-Protected- (_name)` - Protected attributes cannot be used outside of class definition
+unless inside a subclass definition.
+
+* `Private (__name)` - This kind of attribute is inaccessible & invisible.
+It's neither possible to read nor write to those attributes, except inside
+the class definition. 
+
+```
+class A():
+    def __init__(self):
+        self.__priv = "I am private"
+        self._prot = "I am protected"
+        self.pub = "I am public"
+```

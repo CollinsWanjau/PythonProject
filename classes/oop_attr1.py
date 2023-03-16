@@ -20,3 +20,5 @@ We have seen that a method differs from a function only in two aspects:
     2. The first parameter in the definition of a method has to be a reference
     to the instance, which is called the method. This param is usually called
     `self`
+
+For a class C, an instance x of C and a method m of C the following three methods 

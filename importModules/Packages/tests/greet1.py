@@ -1,0 +1,14 @@
+$ python cmd_arguments.py
+(Cmd) help
+
+Documented commands (type help ):
+========================================
+greet
+
+Undocumented commands:
+======================
+EOF  help
+
+>>> (Cmd) help greet
+>>> greet [person]
+        Greet the named person
