@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+!/usr/bin/python3
 """
 Class methods are bound to a class.The first parameter of a class method is a ref
 to a class i.e. a class object.
