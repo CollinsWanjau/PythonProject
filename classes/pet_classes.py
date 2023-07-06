@@ -11,13 +11,13 @@ We have to write Pet.about(p)
 
 
 class Pet:
-    __class_info = "pet animals"
+    _class_info = "pet animals"
     def about(self):
-        print("This class is about " + self.__class_info + "!")
+        print("This class is about " + self._class_info + "!")
 class Dog(Pet):
-    __class_info = "man's best friends"
+    _class_info = "man's best friends"
 class Cat(Pet):
-    __class_info = "all kinds of cats"
+    _class_info = "all kinds of cats"
 p = Pet()
 p.about()
 d = Dog()
