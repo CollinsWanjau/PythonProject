@@ -10,14 +10,14 @@ We have no way of differentiating between the class Pet and its
 
 
 class Pet:
-    __class_info = "pet animals"
+    _class_info = "pet animals"
     @staticmethod
     def about():
-        print("This class is about " + Pet.__class_info + "!")
+        print("This class is about " + Pet._class_info + "!")
 class Dog(Pet):
-    __class_info = "man's best friends"
+    _class_info = "man's best friends"
 class Cat(Pet):
-    __class_info = "all kinds of cats"
+    _class_info = "all kinds of cats"
 Pet.about()
 Dog.about()
 Cat.about()
